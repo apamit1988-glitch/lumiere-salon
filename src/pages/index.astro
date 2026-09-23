@@ -1,0 +1,4729 @@
+---
+const site = {
+    name: "Lumière",
+    city: "Pune",
+    title: "Lumière — Luxury Beauty Studio in Pune",
+    description:
+        "Lumière is a refined beauty studio in Pune offering hair artistry, skin rituals, bridal beauty and nail care.",
+    phone: "+91 98765 43210",
+    email: "hello@lumierebeauty.in",
+    whatsapp: "919876543210",
+    address: "Koregaon Park, Pune",
+    instagram: "https://instagram.com/",
+    tagline: "A refined beauty experience designed around you.",
+    heroTitle: "Beauty,",
+    heroTitleEmphasis: "elevated.",
+    aboutTitle: "Beauty is",
+    aboutTitleEmphasis: "personal.",
+    openingHours: "Mon – Sat · 10:00 AM – 8:00 PM",
+    stats: {
+        years: "10+",
+        clients: "25k+",
+        rating: "4.9",
+    },
+    aboutEyebrow: "THE LUMIÈRE EXPERIENCE",
+    aboutDescription:
+    "At Lumière, every appointment begins with understanding you. From the first consultation to the final touch, our artists create an experience that feels effortless, refined and entirely yours.",
+    bridalDescription:
+    "An elevated beauty experience crafted for your most unforgettable day.",
+    experienceGalleryTitle: "The Lumière Experience",
+    aboutImage: {
+    src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85",
+    alt: "Beauty treatment at Lumière",
+    },
+};
+
+const serviceCategories = [
+    {
+        category: "hair",
+        name: "Hair",
+        description: "Precision cuts, elegant styling and nourishing hair rituals designed around you.",
+    },
+    {
+        category: "skin",
+        name: "Skin",
+        description: "Refined facial and skin rituals created to leave your skin fresh, radiant and cared for.",
+    },
+    {
+        category: "bridal",
+        name: "Bridal",
+        description: "Personalized beauty experiences for your most unforgettable day.",
+    },
+    {
+        category: "nails",
+        name: "Nails",
+        description: "Beautifully finished manicures and detailed nail artistry.",
+    },
+];
+
+const serviceBuilder = {
+  title: "Build Your Beauty Package",
+  description:
+    "Choose the services you'd like to combine and create your own personalised beauty experience."
+};
+
+const services = [
+  {
+    number: "01",
+    name: "Signature Haircut",
+    category: "hair",
+    recommended: true,
+    goals: ["refresh"],
+    matchMessage: "Perfect for a fresh, polished new look.",
+    description:
+      "A precision cut and personalized finish designed to refresh your look.",
+    price: "₹800",
+  },
+  {
+    number: "02",
+    name: "Occasion Hair Styling",
+    category: "hair",
+    recommended: true,
+    goals: ["occasion"],
+    matchMessage: "A beautiful choice for your next special occasion.",
+    description:
+      "Elegant styling and finishing touches for celebrations and special occasions.",
+    price: "₹1,200",
+  },
+  {
+    number: "03",
+    name: "Hair Spa Ritual",
+    category: "hair",
+    recommended: true,
+    goals: ["selfcare"],
+    matchMessage: "A relaxing ritual when your hair needs a little extra care.",
+    description:
+      "A nourishing hair ritual designed to restore softness, shine and relaxation.",
+    price: "₹1,000",
+  },
+
+  {
+    number: "04",
+    name: "Glow Facial",
+    category: "skin",
+    recommended: true,
+    goals: ["refresh"],
+    matchMessage: "Ideal when you want your skin to look fresh and radiant.",
+    description:
+      "A brightening facial designed to leave your skin fresh, radiant and refreshed.",
+    price: "₹1,200",
+  },
+  {
+    number: "05",
+    name: "Event Glow Facial",
+    category: "skin",
+    recommended: true,
+    goals: ["occasion"],
+    matchMessage: "A great choice before an important event.",
+    description:
+      "A refined skin treatment for a fresh, luminous finish before your special event.",
+    price: "₹1,800",
+  },
+  {
+    number: "06",
+    name: "Skin Ritual",
+    category: "skin",
+    recommended: true,
+    goals: ["selfcare"],
+    matchMessage: "A calming treatment designed to give your skin some much-needed care.",
+    description:
+      "A relaxing personalized facial ritual focused on hydration, care and renewal.",
+    price: "₹1,500",
+  },
+
+  {
+    number: "07",
+    name: "Bridal Beauty Consultation",
+    category: "bridal",
+    recommended: true,
+    goals: ["refresh"],
+    matchMessage: "The perfect first step toward planning your bridal look.",
+    description:
+      "A personalized consultation to plan your complete bridal beauty look.",
+    price: "₹1,000",
+  },
+  {
+    number: "08",
+    name: "Bridal Makeup Experience",
+    category: "bridal",
+    recommended: true,
+    goals: ["occasion"],
+    matchMessage: "Designed for your most unforgettable day.",
+    description:
+      "An elevated bridal makeup experience designed around your features and style.",
+    price: "₹8,000",
+  },
+  {
+    number: "09",
+    name: "Bridal Skin Preparation",
+    category: "bridal",
+    recommended: true,
+    goals: ["selfcare"],
+    matchMessage: "A beautiful way to prepare your skin before the big day.",
+    description:
+      "A carefully planned skin-prep ritual to help you feel radiant before your big day.",
+    price: "₹2,500",
+  },
+
+  {
+    number: "10",
+    name: "Classic Manicure",
+    category: "nails",
+    recommended: true,
+    goals: ["refresh"],
+    matchMessage: "A simple way to give your look a clean, polished finish.",
+    description:
+      "A clean, elegant manicure for beautifully groomed hands and nails.",
+    price: "₹600",
+  },
+  {
+    number: "11",
+    name: "Luxe Nail Art",
+    category: "nails",
+    recommended: true,
+    goals: ["occasion"],
+    matchMessage: "Perfect for adding an elegant finishing touch to your occasion look.",
+    description:
+      "Detailed nail styling created to complement your special occasion look.",
+    price: "₹1,200",
+  },
+  {
+    number: "12",
+    name: "Spa Manicure",
+    category: "nails",
+    recommended: true,
+    goals: ["selfcare"],
+    matchMessage: "A relaxing treat for beautifully cared-for hands.",
+    description:
+      "A relaxing manicure ritual with nourishing care for hands and nails.",
+    price: "₹800",
+  },
+];
+
+const gallery = [
+    {
+        number: "01",
+        label: "Hair Transformation",
+        service: "Signature Haircut",
+        beforeImage: "/images/gallery/hair-before.jpg",
+        afterImage: "/images/gallery/hair-after.jpg",
+        beforeAlt: "Hair before styling",
+        afterAlt: "Hair after styling",
+        className: "",
+    },
+    {
+        number: "02",
+        label: "Bridal Beauty",
+        service: "Bridal Makeup Experience",
+        beforeImage: "/images/gallery/bridal-before.jpg",
+        afterImage: "/images/gallery/bridal-after.jpg",
+        beforeAlt: "Bridal look before makeup",
+        afterAlt: "Bridal look after makeup",
+        className: "",
+        },
+    {
+        number: "03",
+        label: "Skin Glow",
+        service: "Glow Facial",
+        beforeImage: "/images/gallery/facial-before.jpg",
+        afterImage: "/images/gallery/facial-after.jpg",
+        beforeAlt: "Skin before facial treatment",
+        afterAlt: "Skin after facial treatment",
+        className: "",
+    },
+    {
+        number: "04",
+        label: "Hair Colour Transformation",
+        service: "Occasion Hair Styling",
+        beforeImage: "/images/gallery/hair-colour-before.jpg",
+        afterImage: "/images/gallery/hair-colour-after.jpg",
+        beforeAlt: "Hair before colour transformation",
+        afterAlt: "Hair after colour transformation",
+        className: "",
+    },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>{site.title}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta
+        name="description"
+        content={site.description}
+    />
+
+    <meta property="og:title" content={site.title} />
+
+    <meta
+        property="og:description"
+        content={site.description}
+    />
+
+    <meta
+        property="og:image"
+        content="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85"
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f7f3ee" />
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    />
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="navbar">
+        <a href="#hero" class="logo">{site.name}</a>
+
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#service-finder">Find Your Service</a>
+            <a href="#service-builder">Package Builder</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Our Work</a>
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+
+        <a href="#contact" class="nav-button">Book</a>
+
+        <button
+            type="button"
+            class="menu-toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#services">Services</a>
+            <a href="#service-finder">Find Your Service</a>
+            <a href="#service-builder">Package Builder</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Our Work</a>
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact" class="mobile-book">Book an appointment</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-content">
+            <p class="eyebrow">BEAUTY STUDIO · {site.city.toUpperCase()}</p>
+
+            <h1>
+                {site.heroTitle}<br />
+                <em>{site.heroTitleEmphasis}</em>
+            </h1>
+
+            <p class="hero-description">
+                {site.tagline}
+            </p>
+
+            <a href="#contact" class="hero-button">
+                Book an appointment
+            </a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85"
+                    alt="Luxury beauty salon"
+                    fetchpriority="high"
+                />
+            </div>
+        </section>
+        <section class="services" id="services">
+            <div class="section-heading reveal">
+                <p class="eyebrow">OUR SERVICES</p>
+                <h2>Beauty rituals,<br /><em>beautifully refined.</em></h2>
+            </div>
+
+            <div class="service-grid">
+                {serviceCategories.map((category, index) => {
+                    const categoryServices = services.filter(
+                    (service) => service.category === category.category
+                    );
+
+                    return (
+                    <article class="service-category-card reveal">
+                        <span class="service-number">
+                        {String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <h3>{category.name}</h3>
+
+                        <p>{category.description}</p>
+
+                        <div class="service-category-list">
+                        {categoryServices.map((service) => (
+                            <details class="service-menu-item">
+                                <summary>
+                                    <span class="service-menu-name">{service.name}</span>
+                                    <span class="service-menu-price">{service.price}</span>
+                                </summary>
+
+                                <p class="service-menu-description">{service.description}</p>
+                            </details>
+                        ))}
+                    </div>
+                    </article>
+                    );
+                })}
+            </div>
+        </section>
+        <section
+            class="service-finder"
+            id="service-finder"
+            data-whatsapp={site.whatsapp}
+            data-site-name={site.name}
+            data-phone={site.phone}
+        >
+            <div class="service-finder-content">
+                <p class="eyebrow">FIND YOUR SERVICE</p>
+
+                <h2>
+                Not sure where<br />
+                <em>to begin?</em>
+                </h2>
+
+                <p>
+                Tell us what you're looking for and we'll help you find the right
+                beauty experience.
+                </p>
+
+                <div class="service-finder-options">
+                    <button type="button" data-category="hair">Hair</button>
+                    <button type="button" data-category="skin">Skin</button>
+                    <button type="button" data-category="bridal">Bridal</button>
+                    <button type="button" data-category="nails">Nails</button>
+                </div>
+
+                <div class="service-finder-goals" id="service-finder-goals" hidden>
+                    <p class="finder-question">What's your goal?</p>
+
+                    <div class="service-finder-options">
+                        <button type="button" data-goal="refresh">
+                        Refresh my look
+                        </button>
+
+                        <button type="button" data-goal="occasion">
+                        Special occasion
+                        </button>
+
+                        <button type="button" data-goal="selfcare">
+                        Self-care
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="service-finder-results"
+                id="service-finder-results"
+                data-services={JSON.stringify(services)}
+            ></div>
+        </section>
+        <section class="service-builder" id="service-builder">
+            <div class="section-heading reveal">
+                <p class="eyebrow">CREATE YOUR EXPERIENCE</p>
+                <h2>Build your beauty<br /><em>package.</em></h2>
+                <p>{serviceBuilder.description}</p>
+            </div>
+
+            <div class="service-builder-content">
+                <div class="service-builder-services">
+                    {serviceCategories.map((category, index) => {
+                        const categoryServices = services.filter(
+                        (service) => service.category === category.category
+                        );
+
+                        return (
+                        <div class="service-builder-category">
+                            <button
+                            type="button"
+                            class="service-builder-category-toggle"
+                            aria-expanded="false"
+                            >
+                            <span>
+                                <small>{String(index + 1).padStart(2, "0")}</small>
+                                {category.name}
+                            </span>
+
+                            <strong>+</strong>
+                            </button>
+
+                            <div class="service-builder-category-content" hidden>
+                            {categoryServices.map((service) => (
+                                <label class="service-builder-option">
+                                <input
+                                    type="checkbox"
+                                    value={service.number}
+                                    data-service-name={service.name}
+                                    data-service-price={service.price}
+                                />
+
+                                <span class="service-builder-option-content">
+                                    <span class="service-builder-check"></span>
+
+                                    <span class="service-builder-option-name">
+                                        {service.name}
+                                    </span>
+
+                                    <strong>{service.price}</strong>
+                                </span>
+                                </label>
+                            ))}
+                            </div>
+                        </div>
+                        );
+                    })}
+                </div>
+
+                <div class="service-builder-summary">
+                    <span>YOUR PACKAGE</span>
+
+                    <div id="service-builder-selected">
+                        No services selected yet.
+                    </div>
+
+                    <strong id="service-builder-total">₹0</strong>
+
+                    <div class="service-builder-actions">
+                        <button type="button" id="service-builder-whatsapp" class="finder-whatsapp">
+                            Enquire on WhatsApp
+                        </button>
+
+                        <a href={`tel:${site.phone}`} class="finder-call">
+                            Call for Enquiry
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-image reveal">
+                <img
+                    src={site.aboutImage.src}
+                    alt={site.aboutImage.alt}
+                    loading="lazy"
+                    decoding="async"
+                />
+            </div>
+
+            <div class="about-content reveal">
+                <p class="eyebrow">{site.aboutEyebrow}</p>
+
+                <h2>
+                    {site.aboutTitle}<br />
+                    <em>{site.aboutTitleEmphasis}</em>
+                </h2>
+
+                <p>
+                    {site.aboutDescription}
+                </p>
+
+                <div class="about-details">
+                <div>
+                    <strong>{site.stats.years}</strong>
+                    <span>Years of artistry</span>
+                </div>
+
+                <div>
+                    <strong>{site.stats.clients}</strong>
+                    <span>Happy clients</span>
+                </div>
+
+                <div>
+                    <strong>{site.stats.rating}</strong>
+                    <span>Client rating</span>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="gallery">
+            <div class="gallery-heading reveal">
+                <p class="eyebrow">OUR WORK</p>
+                <h2>A glimpse of<br /><em>the experience.</em></h2>
+            </div>
+
+            <div class="gallery-grid">
+                {gallery.map((item) => (
+                    <article class:list={["gallery-item", item.className, "reveal"]}>
+                    <div class="transformation-card">
+                        <div class="before-after-slider">
+                            <div class="before-after-after">
+                                <img
+                                src={item.afterImage}
+                                alt={item.afterAlt}
+                                loading="lazy"
+                                decoding="async"
+                                />
+                                <span class="transformation-label">AFTER</span>
+                            </div>
+
+                            <div class="before-after-before">
+                                <img
+                                src={item.beforeImage}
+                                alt={item.beforeAlt}
+                                loading="lazy"
+                                decoding="async"
+                                />
+                                <span class="transformation-label">BEFORE</span>
+                            </div>
+
+                            <div class="before-after-divider">
+                                <span>↔</span>
+                            </div>
+                        </div>
+
+                        <div class="gallery-label">
+                            <span>{item.number}</span>
+
+                            <div>
+                            <strong>{item.label}</strong>
+                            <small>{item.service}</small>
+                            </div>
+                        </div>
+                    </div>
+                    </article>
+                ))}
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="contact-content reveal">
+                <p class="eyebrow">BOOK YOUR VISIT</p>
+
+                <h2>
+                Your beauty,<br />
+                <em>your moment.</em>
+                </h2>
+
+                <p class="contact-description">
+                Ready for a little time for yourself? Get in touch with us
+                and we'll help you find the perfect appointment.
+                </p>
+
+                <p class="contact-note">
+                    Your appointment will be confirmed once our team checks availability
+                    and gets back to you on WhatsApp.
+                </p>
+
+                <form
+                    class="appointment-form"
+                    id="appointment-form"
+                    data-whatsapp={site.whatsapp}
+                >
+
+                    <div class="appointment-field">
+                        <label for="service-picker-trigger">What would you like?</label>
+
+                        <div class="custom-service-picker" id="custom-service-picker">
+                            <button
+                                type="button"
+                                class="service-picker-trigger"
+                                id="service-picker-trigger"
+                                aria-haspopup="listbox"
+                                aria-expanded="false"
+                            >
+                                <span id="selected-service-label">Select a service</span>
+                                <span class="service-picker-arrow" aria-hidden="true">⌄</span>
+                            </button>
+
+                            <div
+                                class="service-picker-options"
+                                id="service-picker-options"
+                                role="listbox"
+                                aria-label="Available services"
+                                hidden
+                            >
+                                <button type="button" class="service-picker-option" role="option" data-value="Hair">Hair</button>
+                                <button type="button" class="service-picker-option" role="option" data-value="Skin">Skin</button>
+                                <button type="button" class="service-picker-option" role="option" data-value="Bridal">Bridal</button>
+                                <button type="button" class="service-picker-option" role="option" data-value="Nails">Nails</button>
+                                <button type="button" class="service-picker-option" role="option" data-value="Other">Other</button>
+                            </div>
+
+                            <input type="hidden" id="appointment-service" name="service" />
+                        </div>
+                    </div>
+
+                   <div class="appointment-field">
+                        <label for="date-picker-trigger">Preferred date</label>
+
+                        <div class="custom-date-picker" id="custom-date-picker">
+                            <button
+                                type="button"
+                                class="date-picker-trigger"
+                                id="date-picker-trigger"
+                                aria-haspopup="dialog"
+                                aria-expanded="false"
+                            >
+                                <span id="selected-date-label">Select a date</span>
+                                <span class="date-picker-arrow" aria-hidden="true">⌄</span>
+                            </button>
+
+                            <div
+                                class="date-picker-calendar"
+                                id="date-picker-calendar"
+                                role="dialog"
+                                aria-label="Choose an appointment date"
+                                hidden
+                            >
+                                <div class="calendar-header">
+                                    <button
+                                        type="button"
+                                        class="calendar-nav"
+                                        id="calendar-prev"
+                                        aria-label="Previous month"
+                                    >
+                                        ‹
+                                    </button>
+
+                                    <span id="calendar-month-year"></span>
+
+                                    <button
+                                        type="button"
+                                        class="calendar-nav"
+                                        id="calendar-next"
+                                        aria-label="Next month"
+                                    >
+                                        ›
+                                    </button>
+                                </div>
+
+                                <div class="calendar-weekdays" aria-hidden="true">
+                                    <span>Su</span>
+                                    <span>Mo</span>
+                                    <span>Tu</span>
+                                    <span>We</span>
+                                    <span>Th</span>
+                                    <span>Fr</span>
+                                    <span>Sa</span>
+                                </div>
+
+                                <div
+                                    class="calendar-days"
+                                    id="calendar-days"
+                                    role="group"
+                                    aria-label="Calendar dates"
+                                ></div>
+                            </div>
+
+                            <input
+                                type="hidden"
+                                id="appointment-date"
+                                name="date"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="appointment-field">
+                        <label for="time-picker-trigger">Preferred time</label>
+
+                        <div class="custom-time-picker" id="custom-time-picker">
+                            <button
+                                type="button"
+                                class="time-picker-trigger"
+                                id="time-picker-trigger"
+                                aria-haspopup="listbox"
+                                aria-expanded="false"
+                            >
+                                <span id="selected-time-label">Select your preferred time</span>
+                                <span class="time-picker-arrow" aria-hidden="true">⌄</span>
+                            </button>
+
+                            <div
+                                class="time-picker-options"
+                                id="time-picker-options"
+                                role="listbox"
+                                aria-label="Available appointment times"
+                                hidden
+                            ></div>
+
+                            <input
+                                type="hidden"
+                                id="appointment-time"
+                                name="time"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="appointment-field">
+                        <label for="appointment-name">Your name</label>
+                        <input
+                            type="text"
+                            id="appointment-name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        />
+                    </div>
+
+                    <div class="appointment-field">
+                        <label for="appointment-details">Additional details (optional)</label>
+                        <textarea
+                            id="appointment-details"
+                            name="details"
+                            rows="3"
+                            placeholder="Tell us a little about what you're looking for..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-button">
+                        Continue on WhatsApp
+                    </button>
+
+                </form>
+                <script>
+                    const appointmentForm = document.querySelector<HTMLFormElement>(
+                        "#appointment-form"
+                    );
+
+                    const appointmentDateInput = document.querySelector<HTMLInputElement>(
+                        "#appointment-date"
+                    );
+
+                    if (appointmentDateInput) {
+                        const today = new Date();
+
+                        const year = today.getFullYear();
+                        const month = String(today.getMonth() + 1).padStart(2, "0");
+                        const day = String(today.getDate()).padStart(2, "0");
+
+                        appointmentDateInput.min = `${year}-${month}-${day}`;
+                    }
+                    const dateInput = appointmentForm?.querySelector<HTMLInputElement>(
+                        "#appointment-date"
+                    );
+
+                    const timeInput = appointmentForm?.querySelector<HTMLInputElement>(
+                        "#appointment-time"
+                    );
+
+                    [dateInput, timeInput].forEach((input) => {
+                        input?.addEventListener("click", () => {
+                            if (typeof input.showPicker === "function") {
+                                try {
+                                    input.showPicker();
+                                } catch {
+                                    // The browser may prevent opening the native picker.
+                                }
+                            }
+                        });
+                    });
+
+                    const servicePicker = document.querySelector<HTMLDivElement>(
+                        "#custom-service-picker"
+                    );
+
+                    const servicePickerTrigger = document.querySelector<HTMLButtonElement>(
+                        "#service-picker-trigger"
+                    );
+
+                    const servicePickerOptions = document.querySelector<HTMLDivElement>(
+                        "#service-picker-options"
+                    );
+
+                    const selectedServiceLabel = document.querySelector<HTMLSpanElement>(
+                        "#selected-service-label"
+                    );
+
+                    const appointmentServiceInput = document.querySelector<HTMLInputElement>(
+                        "#appointment-service"
+                    );
+
+                    if (
+                        servicePicker &&
+                        servicePickerTrigger &&
+                        servicePickerOptions &&
+                        selectedServiceLabel &&
+                        appointmentServiceInput
+                    ) {
+                        const serviceOptions =
+                            servicePickerOptions.querySelectorAll<HTMLButtonElement>(
+                                ".service-picker-option"
+                            );
+
+                        serviceOptions.forEach((option) => {
+                            option.addEventListener("click", () => {
+                                const value = option.dataset.value;
+
+                                if (!value) return;
+
+                                appointmentServiceInput.value = value;
+                                selectedServiceLabel.textContent = value;
+
+                                serviceOptions.forEach((item) => {
+                                    item.setAttribute("aria-selected", "false");
+                                });
+
+                                option.setAttribute("aria-selected", "true");
+
+                                servicePickerOptions.hidden = true;
+                                servicePickerTrigger.setAttribute("aria-expanded", "false");
+                            });
+                        });
+
+                        servicePickerTrigger.addEventListener("click", () => {
+                            const isOpen = !servicePickerOptions.hidden;
+
+                            servicePickerOptions.hidden = isOpen;
+                            servicePickerTrigger.setAttribute("aria-expanded", String(!isOpen));
+                        });
+
+                        document.addEventListener("click", (event) => {
+                            if (!servicePicker.contains(event.target as Node)) {
+                                servicePickerOptions.hidden = true;
+                                servicePickerTrigger.setAttribute("aria-expanded", "false");
+                            }
+                        });
+
+                        servicePicker.addEventListener("keydown", (event) => {
+                            if (event.key === "Escape") {
+                                servicePickerOptions.hidden = true;
+                                servicePickerTrigger.setAttribute("aria-expanded", "false");
+                                servicePickerTrigger.focus();
+                            }
+                        });
+                    }
+
+                    const timePicker = document.querySelector<HTMLDivElement>(
+                        "#custom-time-picker"
+                    );
+
+                    const timePickerTrigger = document.querySelector<HTMLButtonElement>(
+                        "#time-picker-trigger"
+                    );
+
+                    const timePickerOptions = document.querySelector<HTMLDivElement>(
+                        "#time-picker-options"
+                    );
+
+                    const selectedTimeLabel = document.querySelector<HTMLSpanElement>(
+                        "#selected-time-label"
+                    );
+
+                    const appointmentTimeInput = document.querySelector<HTMLInputElement>(
+                        "#appointment-time"
+                    );
+
+                    if (
+                        timePicker &&
+                        timePickerTrigger &&
+                        timePickerOptions &&
+                        selectedTimeLabel &&
+                        appointmentTimeInput
+                    ) {
+                        // Generate sample appointment times: 10:00 AM to 7:30 PM.
+                        for (let minutes = 10 * 60; minutes <= 19 * 60 + 30; minutes += 30) {
+                            const hours24 = Math.floor(minutes / 60);
+                            const mins = minutes % 60;
+
+                            const period = hours24 >= 12 ? "PM" : "AM";
+                            const hours12 = hours24 % 12 || 12;
+                            const formattedMinutes = String(mins).padStart(2, "0");
+
+                            const displayTime = `${hours12}:${formattedMinutes} ${period}`;
+                            const valueTime = `${String(hours24).padStart(2, "0")}:${formattedMinutes}`;
+
+                            const option = document.createElement("button");
+
+                            option.type = "button";
+                            option.className = "time-picker-option";
+                            option.textContent = displayTime;
+                            option.setAttribute("role", "option");
+                            option.setAttribute("aria-selected", "false");
+
+                            option.addEventListener("click", () => {
+                                appointmentTimeInput.value = valueTime;
+                                selectedTimeLabel.textContent = displayTime;
+
+                                timePickerOptions
+                                    .querySelectorAll(".time-picker-option")
+                                    .forEach((item) => {
+                                        item.setAttribute("aria-selected", "false");
+                                    });
+
+                                option.setAttribute("aria-selected", "true");
+
+                                timePickerOptions.hidden = true;
+                                timePickerTrigger.setAttribute("aria-expanded", "false");
+                            });
+
+                            timePickerOptions.appendChild(option);
+                        }
+
+                        // Open or close the dropdown when the trigger is clicked.
+                        timePickerTrigger.addEventListener("click", () => {
+                            const isOpen = !timePickerOptions.hidden;
+
+                            timePickerOptions.hidden = isOpen;
+                            timePickerTrigger.setAttribute("aria-expanded", String(!isOpen));
+                        });
+
+                        // Close the dropdown when clicking outside the picker.
+                        document.addEventListener("click", (event) => {
+                            if (!timePicker.contains(event.target as Node)) {
+                                timePickerOptions.hidden = true;
+                                timePickerTrigger.setAttribute("aria-expanded", "false");
+                            }
+                        });
+
+                        // Close the dropdown when Escape is pressed.
+                        timePicker.addEventListener("keydown", (event) => {
+                            if (event.key === "Escape") {
+                                timePickerOptions.hidden = true;
+                                timePickerTrigger.setAttribute("aria-expanded", "false");
+                                timePickerTrigger.focus();
+                            }
+                        });
+                    }
+
+                    appointmentForm?.addEventListener("submit", (event) => {
+                        event.preventDefault();
+
+                        if (!appointmentForm.reportValidity()) {
+                            return;
+                        }
+
+                        if (!appointmentServiceInput?.value) {
+                            servicePickerTrigger?.focus();
+                            servicePickerOptions?.removeAttribute("hidden");
+                            servicePickerTrigger?.setAttribute("aria-expanded", "true");
+                            selectedServiceLabel!.textContent = "Please select a service";
+                            return;
+                        }
+
+                        if (!appointmentTimeInput?.value) {
+                            timePickerTrigger?.focus();
+                            timePickerOptions?.removeAttribute("hidden");
+                            timePickerTrigger?.setAttribute("aria-expanded", "true");
+                            selectedTimeLabel!.textContent = "Please select a time";
+                            return;
+                        }
+
+                        const formData = new FormData(appointmentForm);
+
+                        const service = formData.get("service");
+                        const date = formData.get("date");
+                        const time = formData.get("time");
+                        const name = formData.get("name");
+                        const details = formData.get("details");
+
+                        const whatsapp = appointmentForm.dataset.whatsapp;
+
+                        if (!whatsapp) {
+                            console.error("WhatsApp number is missing.");
+                            return;
+                        }
+
+                        const message = [
+                            `Hi ${site.name},`,
+                            "",
+                            "I found your salon through your website and would like to enquire about an appointment.",
+                            "",
+                            `Name: ${name}`,
+                            `Service: ${service}`,
+                            `Preferred date: ${date}`,
+                            `Preferred time: ${time}`,
+                            details ? `Additional details: ${details}` : "",
+                            "",
+                            "Please let me know if this time is available.",
+                            "",
+                            "Thank you!"
+                        ]
+                            .filter(Boolean)
+                            .join("\n");
+
+                        window.open(
+                            `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`,
+                            "_blank",
+                            "noopener,noreferrer"
+                        );
+                    });
+
+                    // ========================================
+                    // Lumière — Custom Date Picker
+                    // ========================================
+
+                    const customDatePicker = document.querySelector<HTMLDivElement>(
+                        "#custom-date-picker"
+                    );
+                    const datePickerTrigger = document.querySelector<HTMLButtonElement>(
+                        "#date-picker-trigger"
+                    );
+                    const datePickerCalendar = document.querySelector<HTMLDivElement>(
+                        "#date-picker-calendar"
+                    );
+                    const selectedDateLabel = document.querySelector<HTMLSpanElement>(
+                        "#selected-date-label"
+                    );
+                    const calendarMonthYear = document.querySelector<HTMLSpanElement>(
+                        "#calendar-month-year"
+                    );
+                    const calendarDays = document.querySelector<HTMLDivElement>(
+                        "#calendar-days"
+                    );
+                    const calendarPrev = document.querySelector<HTMLButtonElement>(
+                        "#calendar-prev"
+                    );
+                    const calendarNext = document.querySelector<HTMLButtonElement>(
+                        "#calendar-next"
+                    );
+
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+
+                    let displayedMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+
+                    const formatDateValue = (date: Date): string => {
+                        const year = date.getFullYear();
+                        const month = String(date.getMonth() + 1).padStart(2, "0");
+                        const day = String(date.getDate()).padStart(2, "0");
+
+                        return `${year}-${month}-${day}`;
+                    };
+
+                    const formatDateLabel = (date: Date): string =>
+                        date.toLocaleDateString("en-IN", {
+                            day: "numeric",
+                            month: "long",
+                            year: "numeric",
+                        });
+
+                    const renderCalendar = (): void => {
+                        if (!calendarDays || !calendarMonthYear || !calendarPrev) return;
+
+                        calendarMonthYear.textContent = displayedMonth.toLocaleDateString(
+                            "en-IN",
+                            {
+                                month: "long",
+                                year: "numeric",
+                            }
+                        );
+
+                        calendarDays.replaceChildren();
+
+                        const year = displayedMonth.getFullYear();
+                        const month = displayedMonth.getMonth();
+                        const firstDayOfWeek = new Date(year, month, 1).getDay();
+                        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+                        // Add blank cells before the first day of the month.
+                        for (let i = 0; i < firstDayOfWeek; i++) {
+                            const blank = document.createElement("span");
+                            blank.className = "calendar-empty";
+                            blank.setAttribute("aria-hidden", "true");
+                            calendarDays.appendChild(blank);
+                        }
+
+                        const selectedValue = appointmentDateInput?.value;
+
+                        for (let day = 1; day <= daysInMonth; day++) {
+                            const date = new Date(year, month, day);
+                            date.setHours(0, 0, 0, 0);
+
+                            const dateValue = formatDateValue(date);
+                            const isPastDate = date < today;
+
+                            const dayButton = document.createElement("button");
+                            dayButton.type = "button";
+                            dayButton.className = "calendar-day";
+                            dayButton.textContent = String(day);
+                            dayButton.disabled = isPastDate;
+                            dayButton.setAttribute("aria-label", formatDateLabel(date));
+
+                            if (dateValue === selectedValue) {
+                                dayButton.classList.add("is-selected");
+                                dayButton.setAttribute("aria-pressed", "true");
+                            } else {
+                                dayButton.setAttribute("aria-pressed", "false");
+                            }
+
+                            if (dateValue === formatDateValue(today)) {
+                                dayButton.classList.add("is-today");
+                            }
+
+                            dayButton.addEventListener("click", () => {
+                                if (!appointmentDateInput || !selectedDateLabel) return;
+
+                                appointmentDateInput.value = dateValue;
+                                selectedDateLabel.textContent = formatDateLabel(date);
+
+                                datePickerTrigger?.setAttribute("aria-expanded", "false");
+                                datePickerCalendar?.setAttribute("hidden", "");
+                                renderCalendar();
+                            });
+
+                            calendarDays.appendChild(dayButton);
+                        }
+
+                        // Prevent navigating to months entirely before the current month.
+                        const currentMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+                        calendarPrev.disabled = displayedMonth <= currentMonth;
+                    };
+
+                    const openDatePicker = (): void => {
+                        if (!datePickerCalendar || !datePickerTrigger) return;
+
+                        // Open on the currently selected month, or the current month.
+                        if (appointmentDateInput?.value) {
+                            const [year, month] = appointmentDateInput.value.split("-").map(Number);
+                            displayedMonth = new Date(year, month - 1, 1);
+                        } else {
+                            displayedMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+                        }
+
+                        renderCalendar();
+                        datePickerCalendar.removeAttribute("hidden");
+                        datePickerTrigger.setAttribute("aria-expanded", "true");
+                    };
+
+                    datePickerTrigger?.addEventListener("click", () => {
+                        const isOpen = datePickerTrigger.getAttribute("aria-expanded") === "true";
+
+                        if (isOpen) {
+                            datePickerCalendar?.setAttribute("hidden", "");
+                            datePickerTrigger.setAttribute("aria-expanded", "false");
+                        } else {
+                            openDatePicker();
+                        }
+                    });
+
+                    calendarPrev?.addEventListener("click", () => {
+                        displayedMonth = new Date(
+                            displayedMonth.getFullYear(),
+                            displayedMonth.getMonth() - 1,
+                            1
+                        );
+                        renderCalendar();
+                    });
+
+                    calendarNext?.addEventListener("click", () => {
+                        displayedMonth = new Date(
+                            displayedMonth.getFullYear(),
+                            displayedMonth.getMonth() + 1,
+                            1
+                        );
+                        renderCalendar();
+                    });
+
+                    document.addEventListener("click", (event) => {
+                        if (
+                            customDatePicker &&
+                            event.target instanceof Node &&
+                            !customDatePicker.contains(event.target)
+                        ) {
+                            datePickerCalendar?.setAttribute("hidden", "");
+                            datePickerTrigger?.setAttribute("aria-expanded", "false");
+                        }
+                    });
+
+                    document.addEventListener("keydown", (event) => {
+                        if (event.key === "Escape") {
+                            datePickerCalendar?.setAttribute("hidden", "");
+                            datePickerTrigger?.setAttribute("aria-expanded", "false");
+                            datePickerTrigger?.focus();
+                        }
+                    });
+
+                    // Initial calendar render.
+                    renderCalendar();
+                </script>
+            </div>
+        </section>
+         <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="faq-container">
+                <div class="faq-heading reveal">
+                    <span class="section-eyebrow">GOOD TO KNOW</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>
+                        Everything you need to know before your visit to Lumière.
+                    </p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item reveal">
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            <span>Do I need to book an appointment in advance?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer" hidden>
+                            <p>
+                                We recommend booking in advance to help you get your
+                                preferred date and time. You can send us an enquiry
+                                through our appointment form, and our team will
+                                confirm availability.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            <span>How do I know which service is right for me?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer" hidden>
+                            <p>
+                                You can use our <a href="#service-finder" class="faq-link">Find Your Service</a> feature to explore options based on your needs. If you're unsure,
+                                contact us and we'll help you choose a suitable service.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            <span>Can I enquire about multiple services together?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer" hidden>
+                            <p>
+                                Yes. Use the <a href="#service-builder" class="faq-link">Service Builder</a> to select multiple
+                                services and send your enquiry to us through WhatsApp.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            <span>How can I check the prices of your services?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer" hidden>
+                            <p>
+                                You can explore the services and prices in our <a href="#services" class="faq-link">Services section</a> and use the <a href="#service-builder" class="faq-link">Service Builder</a> to
+                                calculate the total for your selected services.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            <span>How will I know if my appointment is confirmed?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer" hidden>
+                            <p>
+                                Submitting an enquiry does not automatically confirm
+                                an appointment. Our team will respond to your message
+                                to confirm availability and appointment details.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="/" class="footer-logo">{site.name}</a>
+                <p>{site.tagline}</p>
+            </div>
+
+            <div class="footer-column">
+                <span>CONTACT</span>
+                <a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a>
+                <a href={`mailto:${site.email}`}>
+                    {site.email}
+                </a>
+            </div>
+
+            <div class="footer-column">
+                <span>VISIT</span>
+                <p>{site.address}</p>
+            </div>
+
+            <div class="footer-column">
+                <span>OPENING HOURS</span>
+                <p>{site.openingHours}</p>
+            </div>
+
+            <div class="footer-column">
+                <span>FOLLOW</span>
+                <a href={site.instagram} target="_blank" rel="noopener noreferrer">
+                    Instagram
+                </a>
+            </div>
+
+            <div class="footer-column">
+                <span>QUICK LINKS</span>
+                <a href="#services">Services</a>
+                <a href="#service-finder">Find Your Service</a>
+                <a href="#service-builder">Package Builder</a>
+                <a href="#gallery">Our Work</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Book an Appointment</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 {site.name} Beauty Studio</span>
+            <span>All rights reserved.</span>
+        </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+    :root {
+        --color-bg: #f7f3ee;
+        --color-dark: #211c19;
+        --color-text-muted: #766f69;
+        --color-accent: #b89b72;
+        --color-white: #ffffff;
+
+        --font-heading: "Cormorant Garamond", serif;
+        --font-body: "Inter", sans-serif;
+        --color-border: rgba(33, 28, 25, 0.15);
+        --color-border-light: rgba(33, 28, 25, 0.08);
+        --color-dark-soft: rgba(33, 28, 25, 0.08);
+    }
+
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-dark);
+    font-family: var(--font-body);
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--color-bg);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .logo {
+    color: var(--color-dark);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 32px;
+  }
+
+  nav a {
+    color: var(--color-dark);
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .nav-button,
+  .hero-button {
+    background: var(--color-dark);
+    color: var(--color-white);
+    padding: 13px 22px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .hero {
+    min-height: calc(100vh - 90px);
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 6%;
+    padding: 5% 8%;
+  }
+
+  .eyebrow {
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(5rem, 9vw, 9rem);
+    font-weight: 500;
+    line-height: 0.8;
+    letter-spacing: -0.04em;
+  }
+
+  h1 em {
+    font-weight: 400;
+  }
+
+  .hero-description {
+    max-width: 380px;
+    margin: 40px 0 32px;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-image {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .hero-image {
+    position: relative;
+    overflow: hidden;
+    }
+
+    .hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transform: scale(1.02);
+    }
+
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 10% 6% 15%;
+    }
+
+    .hero-image {
+      height: 55vh;
+      min-height: 400px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(4.5rem, 20vw, 7rem);
+    }
+
+    .nav-button {
+      padding: 10px 16px;
+    }
+  }
+
+    .menu-toggle,
+    .mobile-menu {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            padding: 22px 6%;
+        }
+
+        .nav-button {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: flex;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: var(--color-dark);
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            background: var(--color-dark);
+            transition:
+                transform 0.3s ease,
+                opacity 0.2s ease;
+        }
+
+        .menu-toggle.open span:nth-child(1) {
+            transform: translateY(6.5px) rotate(45deg);
+        }
+
+        .menu-toggle.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.open span:nth-child(3) {
+            transform: translateY(-6.5px) rotate(-45deg);
+        }
+
+        .mobile-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            background: var(--color-bg);
+            border-top: 1px solid rgba(33, 28, 25, 0.1);
+            box-shadow: 0 12px 30px rgba(33, 28, 25, 0.08);
+
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0.3s ease;
+        }
+
+        .mobile-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mobile-menu a {
+            color: var(--color-dark);
+            padding: 18px 6%;
+            border-bottom: 1px solid var(--color-border-light);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .mobile-menu .mobile-book {
+            margin: 16px 6%;
+            padding: 14px 20px;
+            border: 0;
+            background: var(--color-dark);
+            color: var(--color-white);
+            text-align: center;
+        }
+    }
+
+    .services {
+        padding: 140px 8%;
+        background: var(--color-white);
+    }
+
+    .section-heading {
+        max-width: 700px;
+        margin-bottom: 70px;
+    }
+
+    .section-heading h2 {
+        margin: 0;
+        font-family: var(--font-heading);
+        font-size: clamp(3.5rem, 7vw, 6rem);
+        font-weight: 500;
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+    }
+
+    .section-heading h2 em {
+        font-weight: 400;
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-top: 1px solid var(--color-border);
+    }
+
+    .service-category-card {
+        position: relative;
+        padding: 32px;
+        background: var(--color-white);
+        border: 1px solid rgba(33, 28, 25, 0.08);
+        text-align: left;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .service-category-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px rgba(33, 28, 25, 0.08);
+    }
+
+    .service-category-card .service-number {
+        display: block;
+        margin-bottom: 28px;
+        color: var(--color-accent);
+        font-size: 0.8rem;
+        letter-spacing: 0.15em;
+    }
+
+    .service-category-card h3 {
+        margin-bottom: 12px;
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .service-category-card > p {
+        max-width: 360px;
+        margin-bottom: 28px;
+        color: var(--color-muted);
+        line-height: 1.7;
+    }
+
+    .service-category-list {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        border-top: 1px solid rgba(33, 28, 25, 0.1);
+    }
+
+    .service-menu-item {
+        border-bottom: 1px solid rgba(33, 28, 25, 0.08);
+    }
+
+    .service-menu-item:last-child {
+        border-bottom: none;
+    }
+
+    .service-menu-item summary {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto 16px;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 0;
+        cursor: pointer;
+        list-style: none;
+    }
+
+    .service-menu-item summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .service-menu-name {
+        color: var(--color-dark);
+        font-size: 0.95rem;
+    }
+
+    .service-menu-price {
+        flex-shrink: 0;
+        color: var(--color-dark);
+        font-size: 0.9rem;
+    }
+
+    .service-menu-item summary::after {
+        content: "+";
+        color: var(--color-accent);
+        font-size: 1.2rem;
+        line-height: 1;
+        text-align: right;
+    }
+
+    .service-menu-item[open] summary::after {
+        content: "−";
+    }
+
+    .service-menu-description {
+        margin: 0;
+        padding: 0 0 16px;
+        color: var(--color-muted);
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .service-card {
+        position: relative;
+        min-height: 300px;
+        padding: 40px;
+        border-bottom: 1px solid var(--color-border);
+        transition:
+            background 0.35s ease,
+            transform 0.35s ease;
+    }
+
+    .service-card:nth-child(odd) {
+        border-right: 1px solid var(--color-border);
+    }
+
+    .service-card:hover {
+        background: var(--color-bg);
+        transform: translateY(-6px);
+    }
+
+    .service-number {
+        color: var(--color-accent);
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        transition: letter-spacing 0.35s ease;
+    }
+
+    .service-card h3 {
+        margin: 55px 0 15px;
+        font-family: var(--font-heading);
+        font-size: 2.8rem;
+        font-weight: 500;
+    }
+
+    .service-card p {
+        max-width: 380px;
+        margin: 0 0 30px;
+        color: var(--color-text-muted);
+        line-height: 1.7;
+    }
+
+    .service-price {
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+        .services {
+            padding: 90px 6%;
+        }
+
+        .section-heading {
+            margin-bottom: 45px;
+        }
+
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-card {
+            min-height: 270px;
+            padding: 30px 20px;
+        }
+
+        .service-card:nth-child(odd) {
+            border-right: 0;
+        }
+
+        .service-card h3 {
+            margin-top: 45px;
+            font-size: 2.5rem;
+        }
+
+        .service-card:hover {
+            transform: none;
+        }
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 8%;
+        padding: 140px 8%;
+        background: #eee8e1;
+    }
+
+    .about-image {
+        height: 650px;
+        overflow: hidden;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    .about-content {
+        max-width: 560px;
+    }
+
+    .about-content h2 {
+        margin: 0 0 35px;
+        font-family: var(--font-heading);
+        font-size: clamp(4rem, 6vw, 6rem);
+        font-weight: 500;
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+    }
+
+    .about-content h2 em {
+        font-weight: 400;
+    }
+
+    .about-content > p:not(.eyebrow) {
+        max-width: 480px;
+        color: var(--color-text-muted);
+        line-height: 1.8;
+        font-size: 1rem;
+    }
+
+    .about-details {
+        display: flex;
+        gap: 50px;
+        margin-top: 55px;
+        padding-top: 30px;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .about-details div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .about-details strong {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .about-details span {
+        color: var(--color-text-muted);
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+        .about {
+            grid-template-columns: 1fr;
+            gap: 60px;
+            padding: 90px 6%;
+        }
+
+        .about-image {
+            height: 500px;
+        }
+
+        .about-details {
+            gap: 25px;
+            justify-content: space-between;
+        }
+    }
+
+    .gallery {
+        padding: 140px 8%;
+        background: var(--color-dark);
+        color: var(--color-white);
+    }
+
+    .gallery-heading {
+        margin-bottom: 70px;
+    }
+
+    .gallery-heading h2 {
+        margin: 0;
+        font-family: var(--font-heading);
+        font-size: clamp(4rem, 7vw, 6rem);
+        font-weight: 500;
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+    }
+
+    .gallery-heading h2 em {
+        font-weight: 400;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 24px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .gallery-item,
+    .gallery-tall,
+    .gallery-wide {
+        height: auto;
+        overflow: visible;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.7s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.04);
+    }
+
+    @media (max-width: 768px) {
+        .gallery {
+            padding: 90px 6%;
+        }
+
+        .gallery-heading {
+            margin-bottom: 45px;
+        }
+
+        .gallery-grid {
+            grid-template-columns: 1fr;
+            gap: 45px;
+            max-width: 100%;
+        }
+
+        .gallery-item,
+        .gallery-tall,
+        .gallery-wide {
+            grid-column: auto;
+            grid-row: auto;
+            height: auto;
+            overflow: visible;
+        }
+
+        .gallery-item:hover img {
+            transform: none;
+        }
+
+        .before-after-slider {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            max-height: none;
+        }
+    }
+
+    .gallery-item {
+        position: relative;
+    }
+
+    .gallery-label {
+        position: absolute;
+        left: 24px;
+        bottom: 24px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--color-white);
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .gallery-label span {
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+    }
+
+    .gallery-label strong {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .contact {
+        padding: 140px 8%;
+        background: var(--color-bg);
+    }
+
+    .contact-content {
+        max-width: 700px;
+    }
+
+    .contact-content h2 {
+        margin: 0 0 35px;
+        font-family: var(--font-heading);
+        font-size: clamp(4rem, 7vw, 7rem);
+        font-weight: 500;
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+    }
+
+    .contact-content h2 em {
+        font-weight: 400;
+    }
+
+    .contact-description {
+        max-width: 470px;
+        margin: 0 0 35px;
+        color: var(--color-text-muted);
+        line-height: 1.8;
+        font-size: 1rem;
+    }
+
+    .contact-note {
+        max-width: 470px;
+        margin: -15px 0 30px;
+        color: var(--color-text-muted);
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .contact-button {
+        display: inline-block;
+        background: var(--color-dark);
+        color: var(--color-white);
+        padding: 15px 24px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+        .contact {
+            padding: 90px 6%;
+        }
+
+        .contact-content h2 {
+            font-size: clamp(4rem, 18vw, 6rem);
+        }
+
+        .contact-description {
+            margin-bottom: 30px;
+        }
+    }
+
+    .footer {
+        padding: 80px 8% 30px;
+        background: var(--color-dark);
+        color: var(--color-white);
+    }
+
+    .footer-top {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1fr 0.7fr 1fr;
+        gap: 50px;
+        padding-bottom: 70px;
+    }
+
+    .footer-brand {
+        max-width: 300px;
+    }
+
+    .footer-logo {
+        color: var(--color-white);
+        font-family: var(--font-heading);
+        font-size: 3rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .footer-brand p {
+        margin: 20px 0 0;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.7;
+        font-size: 0.9rem;
+    }
+
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-column span {
+        margin-bottom: 8px;
+        color: var(--color-accent);
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+    }
+
+    .footer-column a,
+    .footer-column p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.85rem;
+        line-height: 1.7;
+        text-decoration: none;
+    }
+
+    .footer-column a {
+        transition: color 0.25s ease;
+    }
+
+    .footer-column a:hover {
+        color: var(--color-white);
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding-top: 25px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 0.7rem;
+        letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 768px) {
+        .footer {
+            padding: 65px 6% 25px;
+        }
+
+        .footer-top {
+            grid-template-columns: 1fr 1fr;
+            gap: 45px 30px;
+            padding-bottom: 50px;
+        }
+
+        .footer-brand {
+            grid-column: 1 / -1;
+        }
+
+        .footer-logo {
+            font-size: 2.7rem;
+        }
+
+        .footer-bottom {
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    .nav-button,
+    .hero-button,
+    .contact-button {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .hero-button {
+        display: inline-block;
+    }
+
+    .nav-button:hover,
+    .hero-button:hover,
+    .contact-button:hover {
+        background-color: #3a322d;
+        transform: translateY(-2px);
+    }
+
+    nav a {
+        position: relative;
+    }
+
+    nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 1px;
+        background: var(--color-accent);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+    }
+
+    nav a.active::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    nav a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    .service-card:hover .service-number {
+        letter-spacing: 0.25em;
+    }
+
+    .gallery-item::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 35%;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.45),
+            transparent
+        );
+        pointer-events: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 4px;
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+            opacity 0.8s ease,
+            transform 0.8s ease;
+    }
+
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .service-card:nth-child(1) {
+        transition-delay: 0s;
+    }
+
+    .service-card:nth-child(2) {
+        transition-delay: 0.1s;
+    }
+
+    .service-card:nth-child(3) {
+        transition-delay: 0.2s;
+    }
+
+    .service-card:nth-child(4) {
+        transition-delay: 0.3s;
+    }
+
+    .gallery-item:nth-child(1) {
+        transition-delay: 0s;
+    }
+
+    .gallery-item:nth-child(2) {
+        transition-delay: 0.1s;
+    }
+
+    .gallery-item:nth-child(3) {
+        transition-delay: 0.2s;
+    }
+
+    .gallery-item:nth-child(4) {
+        transition-delay: 0.3s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        :global(html) {
+            scroll-behavior: auto;
+        }
+
+        .reveal,
+        .reveal.visible,
+        .service-card,
+        .gallery-item img,
+        .menu-toggle span,
+        .mobile-menu,
+        .nav-button,
+        .hero-button,
+        .contact-button {
+            transition: none;
+        }
+
+        .reveal {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    /* =========================
+   Service Finder
+   ========================= */
+
+    .service-finder {
+        padding: 140px 7vw;
+        background: var(--color-dark);
+        color: var(--color-white);
+    }
+
+    .service-finder-content {
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .service-finder .eyebrow {
+        color: var(--color-accent);
+        margin-bottom: 24px;
+    }
+
+    .service-finder h2 {
+        color: var(--color-white);
+        margin-bottom: 24px;
+    }
+
+    .service-finder h2 em {
+        color: var(--color-accent);
+    }
+
+    .service-finder-content > p:not(.eyebrow) {
+        max-width: 600px;
+        margin: 0 auto 42px;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.8;
+    }
+
+    .service-finder-options {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .service-finder-options button {
+        appearance: none;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: transparent;
+        color: var(--color-white);
+        padding: 14px 28px;
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        letter-spacing: 0.04em;
+        cursor: pointer;
+        transition:
+            background 0.3s ease,
+            color 0.3s ease,
+            border-color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .service-finder-options button:hover {
+        background: var(--color-accent);
+        border-color: var(--color-accent);
+        color: var(--color-dark);
+        transform: translateY(-2px);
+    }
+
+    .service-finder-options button:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 4px;
+    }
+
+    .service-finder-results {
+        max-width: 900px;
+        margin: 35px auto 0;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        .service-finder {
+            padding: 100px 6vw;
+        }
+
+        .service-finder-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .service-finder-options button {
+            width: 100%;
+            padding: 14px 18px;
+        }
+    }
+
+    .service-finder-options button.active {
+        background: var(--color-accent);
+        border-color: var(--color-accent);
+        color: var(--color-dark);
+    }
+
+    .finder-result {
+        display: grid;
+        grid-template-columns: 50px 1fr auto;
+        align-items: center;
+        gap: 24px;
+        padding: 24px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        text-align: left;
+    }
+
+    .finder-result > span {
+        color: var(--color-accent);
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+    }
+
+    .finder-result h3 {
+        margin: 0 0 6px;
+        color: var(--color-white);
+    }
+
+    .finder-result p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.6;
+    }
+
+    .finder-result strong {
+        color: var(--color-accent);
+        white-space: nowrap;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+        .finder-result {
+            grid-template-columns: 35px 1fr;
+            gap: 14px;
+        }
+
+        .finder-result strong {
+            grid-column: 2;
+        }
+    }
+
+    .finder-result-action {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        gap: 12px !important;
+    }
+
+    .finder-whatsapp {
+        display: inline-block;
+        padding: 10px 16px;
+        border: 1px solid var(--color-accent);
+        color: var(--color-accent);
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        transition:
+            background 0.3s ease,
+            color 0.3s ease;
+    }
+
+    .finder-whatsapp:hover {
+        background: var(--color-accent);
+        color: var(--color-dark);
+    }
+
+    @media (max-width: 768px) {
+        .finder-result-action {
+            align-items: flex-start;
+        }
+    }
+
+    .finder-recommendation {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--color-accent);
+        font-size: 0.65rem;
+        letter-spacing: 0.12em;
+    }
+
+    .finder-question {
+    margin: 48px 0 20px;
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    }
+
+    .service-finder-goals[hidden] {
+    display: none;
+    }
+
+    .service-finder-goals {
+    animation: finderFadeIn 0.4s ease;
+    }
+
+    @keyframes finderFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    .finder-result-action {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    :global(.finder-whatsapp) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.1rem;
+        border: 1px solid var(--color-accent);
+        color: var(--color-white);
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition:
+            background 0.3s ease,
+            color 0.3s ease;
+    }
+
+    :global(.finder-whatsapp:hover) {
+        background: var(--color-accent);
+        color: var(--color-dark);
+    }
+
+    :global(.finder-call) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.1rem;
+        border: 1px solid var(--color-accent);
+        color: var(--color-white);
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition:
+            background 0.3s ease,
+            color 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+    :global(.finder-call:hover) {
+        background: var(--color-white);
+        border-color: var(--color-white);
+        color: var(--color-dark);
+    }
+
+    :global(.finder-result-action) {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    :global(.finder-result-action strong) {
+        width: 100%;
+    }
+
+    :global(.finder-result-action) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    :global(.finder-result-action strong) {
+        width: 100%;
+        margin-bottom: 4px;
+        color: var(--color-accent);
+        font-size: 1rem;
+    }
+
+    :global(.finder-result) {
+        margin-top: 8px;
+    }
+
+    .service-builder-option {
+        display: block;
+        cursor: pointer;
+        margin-bottom: 12px;
+    }
+
+    .service-builder-option input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .service-builder-option-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 18px 20px;
+        background: var(--color-white);
+        border: 1px solid rgba(33, 28, 25, 0.1);
+        transition:
+            border-color 0.25s ease,
+            background 0.25s ease,
+            transform 0.25s ease;
+    }
+
+    .service-builder-option-content span {
+        color: var(--color-dark);
+        font-size: 0.95rem;
+    }
+
+    .service-builder-option-content strong {
+        color: var(--color-accent);
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .service-builder-option:hover .service-builder-option-content {
+        transform: translateX(4px);
+        border-color: var(--color-accent);
+    }
+
+    .service-builder-option input:checked + .service-builder-option-content {
+        background: rgba(184, 155, 114, 0.08);
+        border-color: var(--color-accent);
+    }
+
+    .service-builder {
+        padding: 120px 0;
+        margin-bottom: 40px;
+    }
+
+    .service-builder .section-heading {
+        max-width: 760px;
+        margin: 0 auto 60px;
+        text-align: center;
+    }
+
+    .service-builder .section-heading > p:last-child {
+        max-width: 620px;
+        margin: 24px auto 0;
+        color: var(--color-muted);
+        line-height: 1.7;
+    }
+
+    .service-builder-content {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+        gap: 60px;
+        max-width: 1100px;
+        margin: 0 auto;
+        align-items: start;
+    }
+
+    .service-builder-services {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .service-builder-category {
+        border-top: 1px solid rgba(33, 28, 25, 0.15);
+    }
+
+    .service-builder-category:last-child {
+        border-bottom: 1px solid rgba(33, 28, 25, 0.15);
+    }
+
+    .service-builder-category-toggle {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 8px;
+        border: 0;
+        background: transparent;
+        color: var(--color-dark);
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .service-builder-category-toggle span {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+    }
+
+    .service-builder-category-toggle small {
+        color: var(--color-accent);
+        font-family: var(--font-body);
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+    }
+
+    .service-builder-category-toggle strong {
+        color: var(--color-accent);
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .service-builder-category-content {
+        padding: 0 8px 20px;
+    }
+
+    .service-builder-option {
+        display: block;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .service-builder-option-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 17px 20px;
+        background: var(--color-white);
+        border: 1px solid rgba(33, 28, 25, 0.08);
+        transition:
+            border-color 0.25s ease,
+            background 0.25s ease,
+            transform 0.25s ease;
+    }
+
+    .service-builder-option:hover .service-builder-option-content {
+        transform: translateX(4px);
+        border-color: var(--color-accent);
+    }
+
+    .service-builder-option input:checked + .service-builder-option-content {
+        background: rgba(184, 155, 114, 0.08);
+        border-color: var(--color-accent);
+    }
+
+    .service-builder-summary {
+        position: sticky;
+        top: 110px;
+        padding: 32px;
+        background: var(--color-dark);
+        color: var(--color-white);
+    }
+
+    .service-builder-summary > span {
+        display: block;
+        margin-bottom: 24px;
+        color: var(--color-accent);
+        font-size: 0.7rem;
+        letter-spacing: 0.18em;
+    }
+
+    #service-builder-selected {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 28px;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.5;
+    }
+
+    #service-builder-total {
+        display: block;
+        margin-bottom: 28px;
+        color: var(--color-white);
+        font-family: var(--font-heading);
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+
+    .service-builder-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .service-builder-actions .finder-whatsapp,
+    .service-builder-actions .finder-call {
+        width: 100%;
+        max-width: 360px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .service-builder-summary .finder-whatsapp {
+        color: var(--color-white);
+        background: transparent;
+        border: 1px solid var(--color-accent);
+    }
+
+    .service-builder-summary .finder-whatsapp:hover {
+        color: var(--color-dark);
+        background: var(--color-accent);
+    }
+
+    .finder-whatsapp,
+    .finder-call {
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .service-builder {
+            padding: 90px 20px;
+        }
+
+        .service-builder .section-heading {
+            margin-bottom: 40px;
+        }
+
+        .service-builder-content {
+            grid-template-columns: 1fr;
+            gap: 35px;
+        }
+
+        .service-builder-summary {
+            position: static;
+            padding: 24px;
+        }
+
+        .service-builder-category-toggle {
+            padding: 20px 4px;
+        }
+
+        .service-builder-category-toggle span {
+            gap: 16px;
+            font-size: 1.5rem;
+        }
+
+        .service-builder-category-content {
+            padding: 0 4px 15px;
+        }
+
+        .service-builder-option-content {
+            padding: 15px;
+        }
+
+        .service-builder-actions {
+            width: 100%;
+        }
+
+        .service-builder-actions .finder-whatsapp,
+        .service-builder-actions .finder-call {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .service-builder-option-content {
+        display: grid;
+        grid-template-columns: 24px 1fr auto;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .service-builder-check {
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(33, 28, 25, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .service-builder-option input:checked
+    + .service-builder-option-content
+    .service-builder-check {
+        background: var(--color-accent);
+        border-color: var(--color-accent);
+    }
+
+    .service-builder-option input:checked
+    + .service-builder-option-content
+    .service-builder-check::after {
+        content: "✓";
+        color: var(--color-white);
+        font-size: 0.75rem;
+        line-height: 1;
+    }
+
+    .service-builder-option-name {
+        color: var(--color-dark);
+    }
+
+    .finder-add-package.added {
+        border-color: var(--color-accent);
+        background: var(--color-accent);
+        color: var(--color-dark);
+    }
+
+    #service-builder-selected {
+        min-height: 24px;
+    }
+
+    #service-builder-selected span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    #service-builder-selected span::before {
+        content: "✓";
+        color: var(--color-accent);
+        font-size: 0.8rem;
+    }
+
+    :global(.finder-add-package) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.1rem;
+        border: 1px solid var(--color-accent);
+        background: transparent;
+        color: var(--color-white);
+        font-family: var(--font-body);
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition:
+            background 0.3s ease,
+            color 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+    :global(.finder-add-package:hover) {
+        background: var(--color-accent);
+        color: var(--color-dark);
+    }
+
+    :global(.finder-add-package.added) {
+        background: var(--color-accent);
+        border-color: var(--color-accent);
+        color: var(--color-dark);
+    }
+
+    :global(.finder-add-package.added:hover) {
+        background: var(--color-accent);
+        border-color: var(--color-accent);
+        color: var(--color-dark);
+    }
+
+    .transformation-card {
+        height: 100%;
+    }
+
+    .transformation-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+        overflow: hidden;
+    }
+
+    .transformation-image {
+        position: relative;
+        aspect-ratio: 4 / 5;
+        overflow: hidden;
+    }
+
+    .transformation-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;:global(.finder-add-package),
+:global(.finder-whatsapp),
+:global(.finder-call) {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 230px;
+    height: 46px;
+
+    padding: 0 12px;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+        transition: transform 0.5s ease;
+    }
+
+    .transformation-card:hover .transformation-image img {
+        transform: scale(1.03);
+    }
+
+    .transformation-label {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        z-index: 2;
+        padding: 6px 9px;
+        background: rgba(33, 28, 25, 0.78);
+        color: var(--color-white);
+        font-size: 0.6rem;
+        letter-spacing: 0.14em;
+    }
+
+    .before-after-after .transformation-label {
+        left: auto;
+        right: 14px;
+        transition: opacity 0.1s ease;
+    }
+
+    .transformation-card .gallery-label {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 18px 4px 0;
+    }
+
+    .transformation-card .gallery-label > span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 34px;
+        height: 34px;
+        border: 1px solid var(--color-accent);
+        border-radius: 50%;
+        background: var(--color-accent);
+        color: #211c19;
+        font-family: var(--font-body);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        line-height: 1;
+    }
+
+    .transformation-card .gallery-label > div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .transformation-card .gallery-label strong {
+        color: var(--color-white);
+        font-family: var(--font-heading);
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .transformation-card .gallery-label small {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.8rem;
+    }
+
+    .before-after-slider {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        max-height: 520px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .before-after-slider img {
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    .before-after-after,
+    .before-after-before {
+        position: absolute;
+        inset: 0;
+    }
+
+    .before-after-after img,
+    .before-after-before img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .before-after-before {
+        clip-path: inset(0 50% 0 0);
+    }
+
+    .before-after-divider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background: var(--color-white);
+        transform: translateX(-50%);
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .before-after-divider span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--color-white);
+        border-radius: 50%;
+        background: var(--color-dark);
+        color: var(--color-white);
+        transform: translate(-50%, -50%);
+        font-size: 1rem;
+    }
+
+    .before-after-slider {
+        cursor: ew-resize;
+        touch-action: none;
+    }
+
+    .transformation-label {
+        transition: opacity 0.2s ease;
+    }
+
+    @media (max-width: 768px) {
+        .service-builder-option:hover .service-builder-option-content {
+            transform: none;
+        }
+    }
+
+    :global(.finder-add-package),
+    :global(.finder-whatsapp),
+    :global(.finder-call) {
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 230px;
+        height: 46px;
+
+        padding: 0 12px;
+        font-family: var(--font-body);
+        font-size: 0.7rem;
+        letter-spacing: 0.06em;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+        :global(.finder-result-action) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            align-items: stretch;
+        }
+
+        :global(.finder-result-action strong) {
+            grid-column: 1 / -1;
+        }
+
+        :global(.finder-add-package) {
+            grid-column: 1 / -1;
+            width: 100%;
+            max-width: none;
+        }
+
+        :global(.finder-whatsapp),
+        :global(.finder-call) {
+            width: 100%;
+            max-width: none;
+            min-width: 0;
+            white-space: normal;
+            padding: 0 6px;
+            font-size: 0.7rem;
+            letter-spacing: 0.02em;
+            text-align: center;
+        }
+    }
+
+    .service-builder-summary {
+        scroll-margin-top: 100px;
+    }
+
+    /* Package Builder: remove-service button only */
+    :global(.builder-remove-service) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        margin-left: 10px;
+        border: 1px solid #b89b72;
+        border-radius: 50%;
+        background: transparent;
+        color: #b89b72;
+        font-size: 16px;
+        line-height: 1;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    :global(.builder-remove-service:hover) {
+        background-color: #b89b72;
+        color: #211c19;
+    }
+
+    /* Package Builder: align selected service name, price, and remove button */
+    :global(.selected-service-item) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto 24px;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    /* Keep service names aligned to the left */
+    :global(.selected-service-name) {
+        min-width: 0;
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+
+    /* Align prices in a consistent column */
+    :global(.selected-service-price) {
+        white-space: nowrap;
+        text-align: right;
+    }
+
+    /* Keep remove buttons in a consistent right-hand column */
+    :global(.builder-remove-service) {
+        margin-left: 0;
+        justify-self: end;
+    }
+
+    /* Highlight the recommended package name */
+    :global(.finder-package-name) {
+        font-family: "Cormorant Garamond", serif;
+        color: #b89b72;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-top: 12px;
+        margin-bottom: 14px;
+    }
+
+    @media (max-width: 768px) {
+        .transformation-card .gallery-label {
+            padding-left: 0;
+            transform: translateX(-8px);
+        }
+    }
+
+    /* ========================================
+   Lumière — Appointment Enquiry Form
+    ======================================== */
+
+    #appointment-form {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 1.25rem;
+
+        width: 100%;
+        max-width: 520px;
+        box-sizing: border-box;
+        margin: 2.5rem 0 0;
+        padding: 2rem;
+
+        background: #fffdfb;
+        border: 1px solid rgba(184, 155, 114, 0.35);
+        border-radius: 8px;
+        box-shadow: 0 15px 40px rgba(33, 28, 25, 0.06);
+    }
+
+    #appointment-form .appointment-field {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.5rem;
+
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    #appointment-form .appointment-field label {
+        display: block;
+        width: 100%;
+        margin: 0;
+
+        color: #514941;
+        font-family: inherit;
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.025em;
+    }
+
+    #appointment-form .appointment-field input,
+    #appointment-form .appointment-field select,
+    #appointment-form .appointment-field textarea {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0.9rem 1rem;
+
+        border: 1px solid #ded6cc;
+        border-radius: 4px;
+        background: #ffffff;
+
+        color: #211c19;
+        font-family: inherit;
+        font-size: 0.95rem;
+
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    #appointment-form .appointment-field input,
+    #appointment-form .appointment-field select {
+        min-height: 52px;
+    }
+
+    #appointment-form .appointment-field textarea {
+        min-height: 110px;
+        line-height: 1.5;
+        resize: vertical;
+    }
+
+    #appointment-form .appointment-field input:hover,
+    #appointment-form .appointment-field select:hover,
+    #appointment-form .appointment-field textarea:hover {
+        border-color: #b89b72;
+    }
+
+    #appointment-form .appointment-field input:focus,
+    #appointment-form .appointment-field select:focus,
+    #appointment-form .appointment-field textarea:focus {
+        outline: none;
+        border-color: #b89b72;
+        box-shadow: 0 0 0 3px rgba(184, 155, 114, 0.13);
+    }
+
+    #appointment-form .contact-button {
+        display: block;
+        width: 100%;
+        min-height: 54px;
+        box-sizing: border-box;
+        margin: 0.5rem 0 0;
+        padding: 1rem;
+
+        border: 1px solid #211c19;
+        border-radius: 4px;
+        background: #211c19;
+        color: #ffffff;
+
+        font-family: inherit;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-align: center;
+        cursor: pointer;
+
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    #appointment-form .contact-button:hover {
+        background: #3a3028;
+        transform: translateY(-2px);
+    }
+
+    #appointment-form .contact-button:focus-visible {
+        outline: 2px solid #b89b72;
+        outline-offset: 3px;
+    }
+
+    @media (max-width: 600px) {
+        #appointment-form {
+            padding: 1.25rem;
+            gap: 1rem;
+            margin-top: 1.75rem;
+        }
+
+        #appointment-form .appointment-field input,
+        #appointment-form .appointment-field select,
+        #appointment-form .appointment-field textarea {
+            font-size: 16px;
+        }
+    }
+
+    /* Premium date and time controls */
+    #appointment-form input[type="date"],
+    #appointment-form input[type="time"] {
+        width: 100%;
+        min-height: 56px;
+        padding: 0.9rem 1rem;
+
+        border: 1px solid #ded6cc;
+        border-radius: 5px;
+        background: #fffdfb;
+        color: #211c19;
+
+        font-family: inherit;
+        font-size: 0.95rem;
+        cursor: pointer;
+
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
+    }
+
+    #appointment-form input[type="date"]:hover,
+    #appointment-form input[type="time"]:hover {
+        border-color: #b89b72;
+        background: #ffffff;
+    }
+
+    #appointment-form input[type="date"]:focus,
+    #appointment-form input[type="time"]:focus {
+        outline: none;
+        border-color: #b89b72;
+        box-shadow: 0 0 0 3px rgba(184, 155, 114, 0.13);
+    }
+
+    /* Keep the picker controls visible and clickable */
+    #appointment-form input[type="date"]::-webkit-calendar-picker-indicator,
+    #appointment-form input[type="time"]::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+        opacity: 0.75;
+        transition: opacity 0.2s ease;
+    }
+
+    #appointment-form input[type="date"]:hover::-webkit-calendar-picker-indicator,
+    #appointment-form input[type="time"]:hover::-webkit-calendar-picker-indicator {
+        opacity: 1;
+    }
+
+    /* ========================================
+   Lumière — Custom Time Picker
+    ======================================== */
+
+    #custom-time-picker {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Closed picker control */
+    #custom-time-picker .time-picker-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        width: 100%;
+        min-height: 56px;
+        padding: 0.9rem 1rem;
+        box-sizing: border-box;
+
+        border: 1px solid #ded6cc;
+        border-radius: 4px;
+        background: #fffdfb;
+        color: #766f69;
+
+        font-family: inherit;
+        font-size: 0.95rem;
+        text-align: left;
+        cursor: pointer;
+
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
+    }
+
+    #custom-time-picker .time-picker-trigger:hover {
+        border-color: #b89b72;
+        background: #ffffff;
+    }
+
+    #custom-time-picker .time-picker-trigger:focus-visible {
+        outline: none;
+        border-color: #b89b72;
+        box-shadow: 0 0 0 3px rgba(184, 155, 114, 0.13);
+    }
+
+    #custom-time-picker .time-picker-trigger[aria-expanded="true"] .time-picker-arrow {
+        transform: rotate(180deg);
+    }
+
+    /* Dropdown panel */
+    #custom-time-picker .time-picker-options {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        z-index: 20;
+
+        width: 100%;
+        max-height: 240px;
+        overflow-y: auto;
+        box-sizing: border-box;
+        padding: 0.45rem;
+
+        border: 1px solid rgba(184, 155, 114, 0.35);
+        border-radius: 6px;
+        background: #fffdfb;
+        box-shadow: 0 12px 30px rgba(33, 28, 25, 0.12);
+    }
+
+    #custom-time-picker .time-picker-options[hidden] {
+        display: none;
+    }
+
+    /* Dynamically generated options need global selectors in Astro */
+    #custom-time-picker .time-picker-options :global(.time-picker-option) {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1rem;
+        box-sizing: border-box;
+
+        border: none;
+        border-radius: 4px;
+        background: transparent;
+        color: #514941;
+
+        font-family: inherit;
+        font-size: 0.92rem;
+        text-align: left;
+        cursor: pointer;
+
+        transition:
+            background 0.15s ease,
+            color 0.15s ease;
+    }
+
+    #custom-time-picker .time-picker-options :global(.time-picker-option:hover) {
+        background: #f3ece3;
+        color: #211c19;
+    }
+
+    #custom-time-picker .time-picker-options :global(.time-picker-option[aria-selected="true"]) {
+        background: #b89b72;
+        color: #ffffff;
+    }
+
+    /* Subtle scrollbar */
+    #custom-time-picker .time-picker-options::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    #custom-time-picker .time-picker-options::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #d6c5ae;
+    }
+
+    #custom-time-picker .time-picker-options::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    @media (max-width: 600px) {
+        #custom-time-picker .time-picker-trigger {
+            min-height: 54px;
+            font-size: 16px;
+        }
+
+        #custom-time-picker .time-picker-options {
+            max-height: 200px;
+        }
+    }
+
+    /* Consistent colors for appointment controls */
+    #appointment-form select,
+    #appointment-form input[type="date"],
+    #appointment-form #time-picker-trigger {
+        background-color: #fffdfb;
+        color: #514941;
+        border-color: #ded6cc;
+    }
+
+    /* Placeholder text */
+    #appointment-form select:invalid,
+    #appointment-form #selected-time-label {
+        color: #766f69;
+    }
+
+    /* Hover effect */
+    #appointment-form select:hover,
+    #appointment-form input[type="date"]:hover,
+    #appointment-form #time-picker-trigger:hover {
+        background-color: #ffffff;
+        border-color: #b89b72;
+    }
+
+    /* Keep Service, Date, and Time controls aligned with text fields */
+    #appointment-form .appointment-field select,
+    #appointment-form .appointment-field input[type="date"],
+    #appointment-form .appointment-field input[type="text"],
+    #appointment-form .appointment-field textarea,
+    #appointment-form #time-picker-trigger {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* ========================================
+    Lumière — Custom Service Picker
+    ======================================== */
+
+    #custom-service-picker {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Closed picker control */
+    #custom-service-picker .service-picker-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        width: 100%;
+        min-height: 56px;
+        padding: 0.9rem 1rem;
+        box-sizing: border-box;
+
+        border: 1px solid #ded6cc;
+        border-radius: 4px;
+        background: #fffdfb;
+        color: #766f69;
+
+        font-family: inherit;
+        font-size: 0.95rem;
+        text-align: left;
+        cursor: pointer;
+
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
+    }
+
+    #custom-service-picker .service-picker-trigger:hover {
+        border-color: #b89b72;
+        background: #ffffff;
+    }
+
+    #custom-service-picker .service-picker-trigger:focus-visible {
+        outline: none;
+        border-color: #b89b72;
+        box-shadow: 0 0 0 3px rgba(184, 155, 114, 0.13);
+    }
+
+    #custom-service-picker .service-picker-arrow,
+    #custom-time-picker .time-picker-arrow,
+    #custom-date-picker .date-picker-arrow {
+        display: none;
+    }
+
+    #custom-service-picker
+    .service-picker-trigger[aria-expanded="true"]
+    .service-picker-arrow {
+        transform: rotate(180deg);
+    }
+
+    /* Dropdown panel */
+    #custom-service-picker .service-picker-options {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        z-index: 20;
+
+        width: 100%;
+        max-height: 240px;
+        overflow-y: auto;
+        box-sizing: border-box;
+        padding: 0.45rem;
+
+        border: 1px solid rgba(184, 155, 114, 0.35);
+        border-radius: 6px;
+        background: #fffdfb;
+        box-shadow: 0 12px 30px rgba(33, 28, 25, 0.12);
+    }
+
+    #custom-service-picker .service-picker-options[hidden] {
+        display: none;
+    }
+
+    /* Option buttons */
+    #custom-service-picker
+    .service-picker-options
+    :global(.service-picker-option) {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1rem;
+        box-sizing: border-box;
+
+        border: none;
+        border-radius: 4px;
+        background: transparent;
+        color: #514941;
+
+        font-family: inherit;
+        font-size: 0.92rem;
+        text-align: left;
+        cursor: pointer;
+
+        transition:
+            background 0.15s ease,
+            color 0.15s ease;
+    }
+
+    #custom-service-picker
+    .service-picker-options
+    :global(.service-picker-option:hover) {
+        background: #f3ece3;
+        color: #211c19;
+    }
+
+    #custom-service-picker
+    .service-picker-options
+    :global(.service-picker-option[aria-selected="true"]) {
+        background: #b89b72;
+        color: #ffffff;
+    }
+
+    /* Subtle scrollbar */
+    #custom-service-picker .service-picker-options::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    #custom-service-picker .service-picker-options::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #d6c5ae;
+    }
+
+    #custom-service-picker .service-picker-options::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+        #custom-service-picker .service-picker-trigger {
+            min-height: 54px;
+            font-size: 16px;
+        }
+
+        #custom-service-picker .service-picker-options {
+            max-height: 200px;
+        }
+    }
+
+    /* ========================================
+    Lumière — Custom Date Picker
+    ======================================== */
+
+    #custom-date-picker {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Closed picker control */
+    #custom-date-picker .date-picker-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        width: 100%;
+        min-height: 56px;
+        padding: 0.9rem 1rem;
+        box-sizing: border-box;
+
+        border: 1px solid #ded6cc;
+        border-radius: 4px;
+        background: #fffdfb;
+        color: #766f69;
+
+        font-family: inherit;
+        font-size: 0.95rem;
+        text-align: left;
+        cursor: pointer;
+
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
+    }
+
+    #custom-date-picker .date-picker-trigger:hover {
+        border-color: #b89b72;
+        background: #ffffff;
+    }
+
+    #custom-date-picker .date-picker-trigger:focus-visible {
+        outline: none;
+        border-color: #b89b72;
+        box-shadow: 0 0 0 3px rgba(184, 155, 114, 0.13);
+    }
+
+    #custom-date-picker .date-picker-arrow {
+        color: #b89b72;
+        font-size: 1.3rem;
+        line-height: 1;
+        transition: transform 0.2s ease;
+    }
+
+    #custom-date-picker
+    .date-picker-trigger[aria-expanded="true"]
+    .date-picker-arrow {
+        transform: rotate(180deg);
+    }
+
+    /* Calendar panel */
+    #custom-date-picker .date-picker-calendar {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        z-index: 20;
+
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+
+        border: 1px solid rgba(184, 155, 114, 0.35);
+        border-radius: 6px;
+        background: #fffdfb;
+        box-shadow: 0 12px 30px rgba(33, 28, 25, 0.12);
+    }
+
+    #custom-date-picker .date-picker-calendar[hidden] {
+        display: none;
+    }
+
+    /* Month navigation */
+    #custom-date-picker .calendar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+
+        color: #211c19;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    #custom-date-picker .calendar-nav {
+        display: grid;
+        place-items: center;
+
+        width: 36px;
+        height: 36px;
+
+        border: 1px solid #ded6cc;
+        border-radius: 4px;
+        background: transparent;
+        color: #766f69;
+
+        font-size: 1.5rem;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    #custom-date-picker .calendar-nav:hover:not(:disabled) {
+        border-color: #b89b72;
+        background: #f3ece3;
+        color: #211c19;
+    }
+
+    #custom-date-picker .calendar-nav:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+    }
+
+    /* Weekday headings and date grid */
+    #custom-date-picker .calendar-weekdays,
+    #custom-date-picker .calendar-days {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 4px;
+        text-align: center;
+    }
+
+    #custom-date-picker .calendar-weekdays {
+        margin-bottom: 0.5rem;
+        color: #766f69;
+        font-size: 0.78rem;
+        font-weight: 600;
+    }
+
+    #custom-date-picker .calendar-weekdays span {
+        padding: 0.4rem 0;
+    }
+
+    #custom-date-picker .calendar-empty {
+        min-height: 38px;
+    }
+
+    /* Individual date buttons */
+    #custom-date-picker .calendar-days :global(.calendar-day) {
+        display: grid;
+        place-items: center;
+
+        width: 100%;
+        min-width: 0;
+        min-height: 38px;
+        padding: 0.35rem 0;
+
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background: transparent;
+        color: #514941;
+
+        font-family: inherit;
+        font-size: 0.88rem;
+        cursor: pointer;
+
+        transition:
+            background 0.15s ease,
+            color 0.15s ease,
+            border-color 0.15s ease;
+    }
+
+    #custom-date-picker
+    .calendar-days
+    :global(.calendar-day:hover:not(:disabled)) {
+        border-color: #b89b72;
+        background: #f3ece3;
+        color: #211c19;
+    }
+
+    #custom-date-picker
+    .calendar-days
+    :global(.calendar-day.is-today) {
+        border-color: #b89b72;
+    }
+
+    #custom-date-picker
+    .calendar-days
+    :global(.calendar-day.is-selected) {
+        border-color: #b89b72;
+        background: #b89b72;
+        color: #ffffff;
+    }
+
+    #custom-date-picker
+    .calendar-days
+    :global(.calendar-day:disabled) {
+        color: #c9c1b8;
+        cursor: not-allowed;
+    }
+
+    #custom-date-picker
+    .calendar-days
+    :global(.calendar-day:focus-visible) {
+        outline: 2px solid #b89b72;
+        outline-offset: 2px;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+        #custom-date-picker .date-picker-trigger {
+            min-height: 54px;
+            font-size: 16px;
+        }
+
+        #custom-date-picker .date-picker-calendar {
+            padding: 0.75rem;
+        }
+
+        #custom-date-picker .calendar-days :global(.calendar-day) {
+            min-height: 36px;
+            font-size: 0.85rem;
+        }
+    }
+
+    /* ========================================
+   Lumière — Smart FAQ Accordion
+   ======================================== */
+
+    .faq-section {
+        padding: 140px 8%;
+        background: #f1ebe3;
+    }
+
+    .faq-container {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .faq-heading {
+        margin-bottom: 2.5rem;
+    }
+
+    .faq-heading .section-eyebrow {
+        display: inline-block;
+        margin-bottom: 0.8rem;
+        color: #b89b72;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+    }
+
+    .faq-heading h2 {
+        margin: 0 0 0.8rem;
+        color: #211c19;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.2rem, 5vw, 3.4rem);
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .faq-heading p {
+        margin: 0;
+        color: #766f69;
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+    .faq-list {
+        border-top: 1px solid #ded6cc;
+    }
+
+    .faq-item {
+        border-bottom: 1px solid #ded6cc;
+    }
+
+    .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+
+        width: 100%;
+        padding: 1.4rem 0;
+
+        border: 0;
+        background: transparent;
+        color: #211c19;
+
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+        cursor: pointer;
+
+        transition: color 0.2s ease;
+    }
+
+    .faq-question:hover {
+        color: #9d7d51;
+    }
+
+    .faq-question:focus-visible {
+        outline: 2px solid #b89b72;
+        outline-offset: 4px;
+    }
+
+    .faq-icon {
+        flex: 0 0 30px;
+        display: grid;
+        place-items: center;
+
+        width: 30px;
+        height: 30px;
+
+        border: 1px solid #d8c8b2;
+        border-radius: 50%;
+        color: #a88a62;
+
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1;
+
+        transition:
+            transform 0.2s ease,
+            background 0.2s ease,
+            color 0.2s ease;
+    }
+
+    .faq-question[aria-expanded="true"] .faq-icon {
+        transform: rotate(45deg);
+        background: #b89b72;
+        color: #ffffff;
+    }
+
+    .faq-answer {
+        padding: 0 3rem 1.4rem 0;
+    }
+
+    .faq-answer p {
+        margin: 0;
+        color: #766f69;
+        font-size: 0.94rem;
+        line-height: 1.8;
+    }
+
+    .faq-answer[hidden] {
+        display: none;
+    }
+
+    @media (max-width: 600px) {
+        .faq-section {
+            padding: 90px 6%;
+        }
+
+        .faq-heading {
+            margin-bottom: 1.8rem;
+        }
+
+        .faq-question {
+            gap: 1rem;
+            padding: 1.2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .faq-answer {
+            padding: 0 0 1.2rem;
+        }
+
+        .faq-answer p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .faq-link {
+        color: #9d7d51;
+        text-decoration: underline;
+        text-decoration-color: rgba(184, 155, 114, 0.55);
+        text-underline-offset: 3px;
+        transition:
+            color 0.2s ease,
+            text-decoration-color 0.2s ease;
+    }
+
+    .faq-link:hover {
+        color: #211c19;
+        text-decoration-color: #211c19;
+    }
+
+    .faq-link:focus-visible {
+        outline: 2px solid #b89b72;
+        outline-offset: 3px;
+        border-radius: 2px;
+    }
+</style>
+
+<script define:vars={{ site }}>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    menuToggle?.addEventListener("click", () => {
+    const isOpen = mobileMenu?.classList.toggle("open");
+    menuToggle?.classList.toggle("open", isOpen);
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+    );
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+    );
+    });
+
+    mobileMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+        mobileMenu?.classList.remove("open");
+        menuToggle?.classList.remove("open");
+        menuToggle?.setAttribute("aria-label", "Open menu");
+        menuToggle?.setAttribute("aria-expanded", "false");
+    });
+    });
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        } else {
+            entry.target.classList.remove("visible");
+        }
+        });
+    },
+    {
+        threshold: 0.15,
+    }
+    );
+
+    revealElements.forEach((element) => {
+        revealObserver.observe(element);
+    });
+
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    const sections = document.querySelectorAll("main section[id]");
+
+    const navObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        navLinks.forEach((link) => {
+            link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${entry.target.id}`
+            );
+        });
+        });
+    },
+    {
+        rootMargin: "-30% 0px -60% 0px",
+    }
+    );
+
+    sections.forEach((section) => navObserver.observe(section));
+
+    window.addEventListener("scroll", () => {
+    if (window.scrollY < 100) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+    }
+    });
+
+    const finder = document.querySelector(".service-finder");
+    
+    if (finder) {
+        const whatsapp = finder.dataset.whatsapp;
+        const siteName = finder.dataset.siteName;
+        const sitePhone = finder.dataset.phone;
+        const buttons = finder.querySelectorAll(
+            "[data-category]"
+        );
+
+        const goalButtons = finder.querySelectorAll(
+            "[data-goal]"
+        );
+
+        const goalsContainer = finder.querySelector(
+            "#service-finder-goals"
+        );
+
+        const results = finder.querySelector("#service-finder-results");
+
+        const serviceData = JSON.parse(
+            results.dataset.services || "[]"
+        );
+
+        let selectedCategory = "";
+
+        // EXISTING CATEGORY CODE
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+            const category = button.dataset.category;
+
+            selectedCategory = category;
+
+            buttons.forEach((item) => {
+                item.classList.toggle("active", item === button);
+            });
+
+            goalsContainer.hidden = false;
+            goalButtons.forEach((item) => {
+                item.classList.remove("active");
+            });
+            results.innerHTML = "";
+            });
+        });
+
+        // ADD THE NEW GOAL CODE HERE
+        goalButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+            const goal = button.dataset.goal;
+
+            goalButtons.forEach((item) => {
+                item.classList.toggle("active", item === button);
+            });
+
+            const matchingServices = serviceData.filter(
+                (service) =>
+                service.category === selectedCategory &&
+                service.goals.includes(goal)
+            );
+
+            results.innerHTML = matchingServices
+            .map(
+                (service) => `
+                <article class="finder-result">
+
+                    <span>${service.number}</span>
+
+                    <div>
+                    ${
+                        service.recommended
+                        ? '<small class="finder-recommendation">OUR RECOMMENDATION</small>'
+                        : ""
+                    }
+
+                    <h3 class="${service.recommended ? "finder-package-name" : ""}">
+                        ${service.name}
+                    </h3>
+
+                    <p class="finder-match">
+                        ${service.matchMessage}
+                    </p>
+
+                    <p>${service.description}</p>
+                    </div>
+
+                    <div class="finder-result-action">
+                        <strong>From ${service.price}</strong>
+                        ${(() => {
+                            const builderOption = document.querySelector(
+                                `.service-builder-option input[value="${service.number}"]`
+                            );
+
+                            const isAdded = builderOption?.checked;
+
+                            return `
+                                <button
+                                    type="button"
+                                    class="finder-add-package ${isAdded ? "added" : ""}"
+                                    data-service-number="${service.number}"
+                                >
+                                    ${isAdded ? "✓ ADDED TO MY PACKAGE" : "ADD TO MY PACKAGE"}
+                                </button>
+                            `;
+                        })()}
+                        <a
+                            href="https://wa.me/${whatsapp}?text=${encodeURIComponent(
+                                `Hi ${siteName},\n\nI found your salon through your website and I'm interested in ${service.name}.\n\nCould you please share more details?\n\nThank you!`
+                            )}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="finder-whatsapp"
+                        >
+                            ENQUIRE ON WHATSAPP
+                        </a>
+
+                        <a
+                            href="tel:${sitePhone}"
+                            class="finder-call"
+                        >
+                            CALL FOR ENQUIRY
+                        </a>
+                    </div>
+                    </article>
+                `
+                )
+                .join("");
+                results.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                });
+            });
+        });
+
+        finder.addEventListener("click", (event) => {
+            const button = event.target.closest(".finder-add-package");
+
+            if (!button) return;
+
+            const serviceNumber = button.dataset.serviceNumber;
+
+            const builderOption = document.querySelector(
+                `.service-builder-option input[value="${serviceNumber}"]`
+            );
+
+            if (!builderOption) return;
+
+            // Toggle the service selection
+            builderOption.checked = !builderOption.checked;
+
+            // Trigger the existing Package Builder update logic
+            builderOption.dispatchEvent(
+                new Event("change", { bubbles: true })
+            );
+
+            // Update the button label and appearance
+            const isAdded = builderOption.checked;
+
+            button.textContent = isAdded
+                ? "✓ Added to My Package"
+                : "ADD TO MY PACKAGE";
+
+            button.classList.toggle("added", isAdded);
+
+            // Keep the existing behavior of scrolling to the Package Builder
+            document.querySelector(".service-builder-summary")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+    }
+
+    const builder = document.querySelector(".service-builder");
+
+    const categoryToggles = builder.querySelectorAll(
+        ".service-builder-category-toggle"
+    );
+
+    categoryToggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+            const content = toggle.nextElementSibling;
+            const expanded = toggle.getAttribute("aria-expanded") === "true";
+
+            toggle.setAttribute("aria-expanded", String(!expanded));
+            content.hidden = expanded;
+
+            const icon = toggle.querySelector("strong");
+            icon.textContent = expanded ? "+" : "−";
+        });
+    });
+
+    if (builder) {
+        const options = builder.querySelectorAll(
+            ".service-builder-option input"
+        );
+
+        const selectedContainer = builder.querySelector(
+            "#service-builder-selected"
+        );
+
+        const totalElement = builder.querySelector(
+            "#service-builder-total"
+        );
+
+        const whatsappButton = builder.querySelector(
+            "#service-builder-whatsapp"
+        );
+
+        const updateBuilder = () => {
+            const selectedServices = Array.from(options)
+                .filter((option) => option.checked)
+                .map((option) => ({
+                    option,
+                    name: option.dataset.serviceName,
+                    price: Number(option.dataset.servicePrice.replace(/[^\d]/g, "")),
+                }));
+
+            const total = selectedServices.reduce(
+                (sum, service) => sum + service.price,
+                0
+            );
+
+            selectedContainer.innerHTML = selectedServices.length
+                ? selectedServices
+                    .map(
+                        (service) => `
+                            <span class="selected-service-item">
+                                <span class="selected-service-name">${service.name}</span>
+
+                                <span class="selected-service-price">
+                                    ₹${service.price.toLocaleString("en-IN")}
+                                </span>
+
+                                <button
+                                    type="button"
+                                    class="builder-remove-service"
+                                    data-service-value="${service.option.value}"
+                                    aria-label="Remove ${service.name}"
+                                >&times;</button>
+                            </span>
+                        `
+                    )
+                    .join("")
+                : "No services selected yet.";
+
+            totalElement.textContent = `₹${total.toLocaleString("en-IN")}`;
+
+            document.querySelectorAll(".finder-add-package").forEach((button) => {
+                const serviceNumber = button.dataset.serviceNumber;
+
+                const matchingOption = Array.from(options).find(
+                    (option) => option.value === serviceNumber
+                );
+
+                if (!matchingOption) return;
+
+                const isAdded = matchingOption.checked;
+
+                button.textContent = isAdded
+                    ? "✓ Added to My Package"
+                    : "ADD TO MY PACKAGE";
+
+                button.classList.toggle("added", isAdded);
+            });
+        };
+
+        selectedContainer.addEventListener("click", (event) => {
+                const removeButton = event.target.closest(".builder-remove-service");
+
+                if (!removeButton) return;
+
+                const serviceValue = removeButton.dataset.serviceValue;
+
+                const matchingOption = Array.from(options).find(
+                    (option) => option.value === serviceValue
+                );
+
+                if (!matchingOption) return;
+
+                // Remove the service from the Package Builder
+                matchingOption.checked = false;
+
+                // Trigger the existing Package Builder update logic
+                matchingOption.dispatchEvent(
+                    new Event("change", { bubbles: true })
+                );
+
+                // Reset the corresponding Find Your Service button
+                document.querySelectorAll(".finder-add-package").forEach((button) => {
+                    if (button.dataset.serviceNumber === serviceValue) {
+                        button.textContent = "ADD TO MY PACKAGE";
+                        button.classList.remove("added");
+                    }
+                });
+            });
+
+        options.forEach((option) => {
+            option.addEventListener("change", updateBuilder);
+        });
+
+        whatsappButton.addEventListener("click", () => {
+            const selectedServices = Array.from(options)
+                .filter((option) => option.checked)
+                .map((option) => ({
+                    name: option.dataset.serviceName,
+                    price: Number(option.dataset.servicePrice.replace(/[^\d]/g, "")),
+                }));
+
+            if (!selectedServices.length) {
+                alert("Please select at least one service before enquiring.");
+                return;
+            }
+
+            const total = selectedServices.reduce(
+                (sum, service) => sum + service.price,
+                0
+            );
+
+            const message = `Hi ${site.name},
+
+        I found your salon through your website and I'm interested in this beauty package:
+
+        ${selectedServices
+            .map(
+                (service) =>
+                    `• ${service.name} - ₹${service.price.toLocaleString("en-IN")}`
+            )
+            .join("\n")}
+
+        Package Total: ₹${total.toLocaleString("en-IN")}
+
+        Could you please share more details?
+
+        Thank you!`;
+
+            window.open(
+                `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`,
+                "_blank"
+            );
+        });
+    }
+
+    const transformationSliders = document.querySelectorAll(
+        ".before-after-slider"
+    );
+
+    transformationSliders.forEach((slider) => {
+        const before = slider.querySelector(".before-after-before");
+        const after = slider.querySelector(".before-after-after");
+        const divider = slider.querySelector(".before-after-divider");
+        const updatePosition = (clientX) => {
+            const rect = slider.getBoundingClientRect();
+
+            let percentage = ((clientX - rect.left) / rect.width) * 100;
+
+            percentage = Math.max(0, Math.min(100, percentage));
+
+            before.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+            after.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+            divider.style.left = `${percentage}%`;
+        };
+
+        slider.addEventListener("pointerdown", (event) => {
+            event.preventDefault();
+
+            slider.setPointerCapture(event.pointerId);
+
+            updatePosition(event.clientX);
+        });
+
+        slider.addEventListener("pointermove", (event) => {
+            if (!slider.hasPointerCapture(event.pointerId)) {
+            return;
+            }
+
+            event.preventDefault();
+
+            updatePosition(event.clientX);
+        });
+
+        slider.addEventListener("pointerup", (event) => {
+            if (slider.hasPointerCapture(event.pointerId)) {
+            slider.releasePointerCapture(event.pointerId);
+            }
+        });
+
+        slider.addEventListener("pointercancel", (event) => {
+            if (slider.hasPointerCapture(event.pointerId)) {
+            slider.releasePointerCapture(event.pointerId);
+            }
+        });
+    });
+
+    // ========================================
+    // Lumière — FAQ Accordion
+    // ========================================
+
+    document.querySelectorAll("#faq .faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+            const answer = question.nextElementSibling;
+
+            if (!answer || !answer.classList.contains("faq-answer")) {
+                return;
+            }
+
+            const isExpanded = question.getAttribute("aria-expanded") === "true";
+
+            // Close all FAQ items.
+            document.querySelectorAll("#faq .faq-question").forEach((otherQuestion) => {
+                otherQuestion.setAttribute("aria-expanded", "false");
+
+                const otherAnswer = otherQuestion.nextElementSibling;
+
+                if (otherAnswer && otherAnswer.classList.contains("faq-answer")) {
+                    otherAnswer.hidden = true;
+                }
+            });
+
+            // Open the clicked item if it was previously closed.
+            if (!isExpanded) {
+                question.setAttribute("aria-expanded", "true");
+                answer.hidden = false;
+            }
+        });
+    });
+</script>
