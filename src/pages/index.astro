@@ -322,7 +322,6 @@ const gallery = [
             <a href="#service-builder">Package Builder</a>
             <a href="#about">About</a>
             <a href="#gallery">Our Work</a>
-            <a href="#contact">Contact</a>
             <a href="#faq">FAQ</a>
             <a href="#contact" class="mobile-book">Book an appointment</a>
         </div>
@@ -634,6 +633,7 @@ const gallery = [
                     class="appointment-form"
                     id="appointment-form"
                     data-whatsapp={site.whatsapp}
+                    data-salon-name={site.name}
                 >
 
                     <div class="appointment-field">
@@ -1034,6 +1034,7 @@ const gallery = [
                         const details = formData.get("details");
 
                         const whatsapp = appointmentForm.dataset.whatsapp;
+                        const salonName = appointmentForm.dataset.salonName;
 
                         if (!whatsapp) {
                             console.error("WhatsApp number is missing.");
@@ -1041,7 +1042,7 @@ const gallery = [
                         }
 
                         const message = [
-                            `Hi ${site.name},`,
+                            `Hi ${salonName},`,
                             "",
                             "I found your salon through your website and would like to enquire about an appointment.",
                             "",
@@ -3189,7 +3190,7 @@ const gallery = [
 
     .before-after-slider {
         cursor: ew-resize;
-        touch-action: none;
+        touch-action: pan-y;
     }
 
     .transformation-label {
@@ -4619,22 +4620,22 @@ const gallery = [
                 0
             );
 
-            const message = `Hi ${site.name},
-
-        I found your salon through your website and I'm interested in this beauty package:
-
-        ${selectedServices
-            .map(
-                (service) =>
-                    `• ${service.name} - ₹${service.price.toLocaleString("en-IN")}`
-            )
-            .join("\n")}
-
-        Package Total: ₹${total.toLocaleString("en-IN")}
-
-        Could you please share more details?
-
-        Thank you!`;
+            const message = [
+                `Hi ${site.name},`,
+                "",
+                "I found your salon through your website and I'm interested in this beauty package:",
+                "",
+                ...selectedServices.map(
+                    (service) =>
+                        `• ${service.name} - ₹${service.price.toLocaleString("en-IN")}`
+                ),
+                "",
+                `Package Total: ₹${total.toLocaleString("en-IN")}`,
+                "",
+                "Could you please share more details?",
+                "",
+                "Thank you!"
+            ].join("\n");
 
             window.open(
                 `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`,
