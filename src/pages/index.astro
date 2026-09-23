@@ -1050,14 +1050,14 @@ const gallery = [
                             `Service: ${service}`,
                             `Preferred date: ${date}`,
                             `Preferred time: ${time}`,
-                            details ? `Additional details: ${details}` : "",
                             "",
+                            ...(details.trim()
+                                ? ["Additional details:", details.trim(), ""]
+                                : []),
                             "Please let me know if this time is available.",
                             "",
                             "Thank you!"
-                        ]
-                            .filter(Boolean)
-                            .join("\n");
+                        ].join("\n");
 
                         window.open(
                             `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`,
